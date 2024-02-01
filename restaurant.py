@@ -7,7 +7,7 @@ vegetarian = str(input('Is anyone in your party vegetarian? '))
 vegan = str(input('Is anyone in your party vegan? '))
 gluten_free = str(input('Is anyone in your party gluten-free? '))
 
-#Capitalizing:
+#Capitalization:
 vegetarian = vegetarian.capitalize()
 vegan = vegan.capitalize()
 gluten_free = gluten_free.capitalize()
