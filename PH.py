@@ -1,41 +1,33 @@
-# CS175L
-# Delvis Rodriguez
-# PH
+#CS175L
+#Delvis Rodriguez
+#PH
 
 hours = 2
 minutes_in_hour = 60
 interval_minutes = 10
-readings_per_hour = int(minutes_in_hour / interval_minutes)
-total_readings = readings_per_hour * hours
+readings = int(minutes_in_hour/interval_minutes)
 count = 0
 total = 0
 average = 0.0
+time = 1
 
-for hour in range(1, hours + 1):
-    count = 0
-    print(f'Hour: {hour}')
-    
-    for _ in range(readings_per_hour):
+for x in range (1, hours + 1):
+    reading_num = 0
+    print(f'Hour: {time}')
+    time += 1
+    for y in range (readings):
+        reading_num += 1
+        reading_ph = int(input(f'Reading {reading_num} Enter PH (10-50) '))
+        while (reading_ph < 10) or (reading_ph > 50):
+            print(f'ERROR - PH must be an integer from 10 thru 50. Re-Enter')
+            reading_ph = int(input(f'Reading {reading_num} Enter PH (10-50) '))
+        total += reading_ph
         count += 1
-
-        while True:
-            try:
-                ph_reading = float(input(f"Reading {count} Enter PH (10-50): "))
-                if 10 <= ph_reading <= 50:
-                    break
-                else:
-                    print('ERROR - PH must be an integer from 10 thru 50. Re-Enter')
-            except ValueError:
-                print('ERROR - PH must be an integer from 10 thru 50. Re-Enter')
-
-        total += ph_reading
     print()
 
-if total > 0:
-    average = total / total_readings
-
-print(f"\nAverage PH: {average:.2f}")
-
+Average = float(total / count)
+print(f'Average PH: {Average:.2f}')
+    
 
 
 
