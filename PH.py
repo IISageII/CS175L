@@ -26,7 +26,7 @@ for hour in range(1, hours + 1):
                 else:
                     print('ERROR - PH must be an integer from 10 thru 50. Re-Enter')
             except ValueError:
-                print("Invalid input. Please enter a valid number.")
+                print('ERROR - PH must be an integer from 10 thru 50. Re-Enter')
 
         total += ph_reading
 
