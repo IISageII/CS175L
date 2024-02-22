@@ -13,7 +13,7 @@ average = 0.0
 
 for hour in range(1, hours + 1):
     count = 0
-    print(f"\nHour {hour}:")
+    print(f'Hour: {hour}')
     
     for _ in range(readings_per_hour):
         count += 1
@@ -29,6 +29,7 @@ for hour in range(1, hours + 1):
                 print('ERROR - PH must be an integer from 10 thru 50. Re-Enter')
 
         total += ph_reading
+    print()
 
 if total > 0:
     average = total / total_readings
