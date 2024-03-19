@@ -15,6 +15,7 @@ def main():
             print(f'    {content:.2f} Total is:    {total:.2f}')
         else:
             print(f'   {content:.2f} Total is:   {total:.2f}')
+    data.close()
     average = float(total / num)
     print(f'Average: {average:.1f}')
 
